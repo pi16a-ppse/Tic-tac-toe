@@ -1,0 +1,26 @@
+.MAIN_DIV{
+    /* Ширина */
+    width: 306px;
+    /* Отступ */
+    margin: 0 auto;
+}
+
+
+.MAIN_DIV .div{
+    /* Ширина, высота, рамка, курсор, размещение, размещение текста, 
+    размер текста, высота линий*/
+    width: 90px;
+    height: 90px;
+    border: 2px solid #999;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    font-size: 80px;
+    line-height: 94px;
+}
+
+
+/* Кнопка */
+#Res {
+    font-size: 26px;
+}
