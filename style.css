@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .MAIN_DIV{
     /* Ширина */
     width: 306px;
