@@ -18,6 +18,7 @@ $(document).ready(function(){
             if( $('.'+first).text() == znak && $('.'+second).text() == znak && $('.'+third).text() == znak ){
                 $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').css("background-color", "#FFF");
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#83e2c3");
+                $('.result').text('Вы выиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 exit_flag = true;
             }    
@@ -35,6 +36,7 @@ $(document).ready(function(){
             if( $('.'+first).text() == znak && $('.'+second).text() == znak && $('.'+third).text() == '' && exit_flag == false ){
                 $('.'+third).text(znak);
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
+                $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 exit_flag = true;
             }    
@@ -42,6 +44,7 @@ $(document).ready(function(){
             if( $('.'+first).text() == znak && $('.'+second).text() == '' && $('.'+third).text() == znak && exit_flag == false ){
                 $('.'+second).text(znak);
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
+                $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 exit_flag = true;
             }    
@@ -49,6 +52,7 @@ $(document).ready(function(){
             if( $('.'+first).text() == '' && $('.'+second).text() == znak && $('.'+third).text() == znak && exit_flag == false ){
                 $('.'+first).text(znak);
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
+                $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 exit_flag = true;
             }    
@@ -147,6 +151,7 @@ function check_3_user(znak){
         if( $('.'+first).text() == znak && $('.'+second).text() == znak && $('.'+third).text() == znak ){
             $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').css("background-color", "#FFF");
             $('.'+first+',.'+second+',.'+third).css("background-color", "#83e2c3");
+            $('.result').text('Вы выиграли!');
             $('.MAIN_DIV .div').unbind('click');
             exit_flag = true;
         }     
@@ -164,6 +169,7 @@ function check_2_comp(znak){
         if( $('.'+first).text() == znak && $('.'+second).text() == znak && $('.'+third).text() == '' && exit_flag == false ){
             $('.'+third).text(znak);
             $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
+            $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
             exit_flag = true;
         }    
@@ -171,6 +177,7 @@ function check_2_comp(znak){
         if( $('.'+first).text() == znak && $('.'+second).text() == '' && $('.'+third).text() == znak && exit_flag == false ){
             $('.'+second).text(znak);
             $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
+            $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
             exit_flag = true;
         }    
@@ -178,6 +185,7 @@ function check_2_comp(znak){
         if( $('.'+first).text() == '' && $('.'+second).text() == znak && $('.'+third).text() == znak && exit_flag == false ){
             $('.'+first).text(znak);
             $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
+            $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
             exit_flag = true;
         }    
@@ -236,6 +244,7 @@ $('.MAIN_DIV .div').click(function(){
 
 function CHECK() {
     if ($('.kletka1').text() != '' && $('.kletka2').text() != '' && $('.kletka3').text() != '' && $('.kletka4').text() != '' && $('.kletka5').text() != '' && $('.kletka6').text() != '' && $('.kletka7').text() != '' && $('.kletka8').text() != '' && $('.kletka9').text() != ''){
+        $('.result').text("Ничья"); 
         $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').css("background-color", "#FFE097");  
     }
 }
