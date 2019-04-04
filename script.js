@@ -1,6 +1,8 @@
 var znak_user = 'X';
 var znak_comp = 'O';
 
+var score_user = '0';
+var score_comp = '0';
 
 $(document).ready(function(){
 
@@ -20,6 +22,8 @@ $(document).ready(function(){
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#83e2c3");
                 $('.result').text('Вы выиграли!');
                 $('.MAIN_DIV .div').unbind('click');
+                score_user++;
+                Score();
                 exit_flag = true;
             }    
         }
@@ -38,6 +42,8 @@ $(document).ready(function(){
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
                 $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
+                score_comp++;
+                Score();
                 exit_flag = true;
             }    
              
@@ -46,6 +52,8 @@ $(document).ready(function(){
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
                 $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
+                score_comp++;
+                Score();
                 exit_flag = true;
             }    
              
@@ -54,6 +62,8 @@ $(document).ready(function(){
                 $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
                 $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
+                score_comp++;
+                Score();
                 exit_flag = true;
             }    
         }
@@ -153,6 +163,8 @@ function check_3_user(znak){
             $('.'+first+',.'+second+',.'+third).css("background-color", "#83e2c3");
             $('.result').text('Вы выиграли!');
             $('.MAIN_DIV .div').unbind('click');
+            score_user++;
+            Score();
             exit_flag = true;
         }     
     }
@@ -171,6 +183,8 @@ function check_2_comp(znak){
             $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
             $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
+            score_user++;
+            Score();
             exit_flag = true;
         }    
          
@@ -179,6 +193,8 @@ function check_2_comp(znak){
             $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
             $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
+            score_user++;
+            Score();
             exit_flag = true;
         }    
          
@@ -187,6 +203,8 @@ function check_2_comp(znak){
             $('.'+first+',.'+second+',.'+third).css("background-color", "#EF7C7C");
             $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
+            score_user++;
+            Score();
             exit_flag = true;
         }    
     }
@@ -247,4 +265,9 @@ function CHECK() {
         $('.result').text("Ничья"); 
         $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').css("background-color", "#FFE097");  
     }
+}
+
+
+function Score(){
+    $('.score').text(score_user + " : " + score_comp); 
 }
