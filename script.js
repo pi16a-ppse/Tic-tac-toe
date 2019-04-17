@@ -5,6 +5,8 @@ var score_user = '0';
 var score_comp = '0';
 
 $(document).ready(function(){
+    //Увеличение на 120%
+    document.body.style.zoom = "120%";
 
     var exit_flag = false;
     var win_user_array = ['123','456','789','147','258','369','159','357'];
@@ -267,6 +269,19 @@ function CHECK() {
     }
 }
 
+function O(){
+    znak_user = "O";
+    znak_comp = "X";
+    $('#B2').css("background-color", "lime"); 
+    $('#B1').css("background-color", "white"); 
+}
+
+function X(){
+    znak_user = "X";
+    znak_comp = "O";
+    $('#B1').css("background-color", "lime"); 
+    $('#B2').css("background-color", "white"); 
+}
 
 function Score(){
     $('.score').text(score_user + " : " + score_comp); 
