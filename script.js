@@ -269,20 +269,6 @@ function CHECK() {
     }
 }
 
-function O(){
-    znak_user = "O";
-    znak_comp = "X";
-    $('#B2').css("background-color", "lime"); 
-    $('#B1').css("background-color", "white"); 
-}
-
-function X(){
-    znak_user = "X";
-    znak_comp = "O";
-    $('#B1').css("background-color", "lime"); 
-    $('#B2').css("background-color", "white"); 
-}
-
 function Score(){
     $('.score').text(score_user + " : " + score_comp); 
 }
