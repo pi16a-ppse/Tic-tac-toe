@@ -5,8 +5,8 @@ var score_user = '0';
 var score_comp = '0';
 
 $(document).ready(function(){
-    //Увеличение на 120%
-    document.body.style.zoom = "120%";
+    //Увеличение на 125%
+    document.body.style.zoom = "125%";
 
     var exit_flag = false;
     var win_user_array = ['123','456','789','147','258','369','159','357'];
