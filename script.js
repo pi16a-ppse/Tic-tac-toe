@@ -12,7 +12,7 @@ $(document).ready(function(){
     var win_user_array = ['123','456','789','147','258','369','159','357'];
          
     //Определяем победу игрока
-    function check_3_user(znak){
+    function check3user(znak){
         for (var i = 0; i < 8; i++) {
          
             var first = 'kletka' + win_user_array[i].substr(0,1);
@@ -32,7 +32,7 @@ $(document).ready(function(){
     }
      
     //Определяем возможность победы компьютера
-    function check_2_comp(znak){
+    function check2comp(znak){
         for (var i = 0; i < 8; i++) {
          
             var first = 'kletka' + win_user_array[i].substr(0,1);
@@ -72,7 +72,7 @@ $(document).ready(function(){
     }
      
     //Определяем ход компьютера
-    function check_2_user(znak){
+    function check2user(znak){
  
         for (var i = 0; i < 8; i++) {
          
@@ -108,10 +108,10 @@ $(document).ready(function(){
         //Если клетка пустая
         if( $(this).text() == '' ){
             $(this).text(znak_user); 
-            CHECK();   
-            check_3_user(znak_user);
-            check_2_comp(znak_comp);
-            check_2_user(znak_user);
+            check();   
+            check3user(znak_user);
+            check2comp(znak_comp);
+            check2user(znak_user);
             if( exit_flag == false ){
                 for (var i = 1; i < 10; i++) {    
                     if( $('.kletka'+i).text() == '' ){
@@ -124,7 +124,7 @@ $(document).ready(function(){
     });
 });
 
-function Restart(){
+function restart(){
     $('.result').text('Ваш ход!');
     $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').text('');
     $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').css("background-color", "#FFF");
@@ -133,9 +133,9 @@ function Restart(){
         //Если клетка пустая
         if( $(this).text() == '' ){
             $(this).text(znak_user);    
-            check_3_user(znak_user);
-            check_2_comp(znak_comp);
-            check_2_user(znak_user);
+            check3user(znak_user);
+            check2comp(znak_comp);
+            check2user(znak_user);
              
             if( exit_flag == false ){
                 for (var i = 1; i < 10; i++) {    
@@ -153,9 +153,9 @@ var exit_flag = false;
 var win_user_array = ['123','456','789','147','258','369','159','357'];
      
 //Определяем победу игрока
-function check_3_user(znak){
+function check3user(znak){
     for (var i = 0; i < 8; i++) {
-        CHECK();
+        check();
         var first = 'kletka' + win_user_array[i].substr(0,1);
         var second = 'kletka' + win_user_array[i].substr(1,1);
         var third = 'kletka' + win_user_array[i].substr(2,1);
@@ -173,7 +173,7 @@ function check_3_user(znak){
 }
  
 //Определяем возможность победы компьютера
-function check_2_comp(znak){
+function check2comp(znak){
     for (var i = 0; i < 8; i++) {
      
         var first = 'kletka' + win_user_array[i].substr(0,1);
@@ -213,7 +213,7 @@ function check_2_comp(znak){
 }
  
 //Определяем ход компьютера
-function check_2_user(znak){
+function check2user(znak){
 
     for (var i = 0; i < 8; i++) {
      
@@ -247,10 +247,10 @@ function check_2_user(znak){
 $('.MAIN_DIV .div').click(function(){
     if( $(this).text() == '' ){
         $(this).text(znak_user); 
-        CHECK();   
-        check_3_user(znak_user);
-        check_2_comp(znak_comp);
-        check_2_user(znak_user);  
+        check();   
+        check3user(znak_user);
+        check2comp(znak_comp);
+        check2user(znak_user);  
         if( exit_flag == false ){
             for (var i = 1; i < 10; i++) {    
                 if( $('.kletka'+i).text() == '' ){
@@ -262,13 +262,13 @@ $('.MAIN_DIV .div').click(function(){
     }
 });
 
-function CHECK() {
+function check() {
     if ($('.kletka1').text() != '' && $('.kletka2').text() != '' && $('.kletka3').text() != '' && $('.kletka4').text() != '' && $('.kletka5').text() != '' && $('.kletka6').text() != '' && $('.kletka7').text() != '' && $('.kletka8').text() != '' && $('.kletka9').text() != ''){
         $('.result').text("Ничья"); 
         $('.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9').css("background-color", "#FFE097");  
     }
 }
 
-function Score(){
+function score(){
     $('.score').text(score_user + " : " + score_comp); 
 }
