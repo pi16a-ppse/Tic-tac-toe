@@ -39,7 +39,7 @@ $(document).ready(function(){
                 $('.result').text('Вы выиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 score_user++;
-                Score();
+                score();
                 exit_flag = true;
             }    
         }
@@ -67,7 +67,7 @@ $(document).ready(function(){
                 $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 score_comp++;
-                Score();
+                score();
                 exit_flag = true;
             }    
              
@@ -77,7 +77,7 @@ $(document).ready(function(){
                 $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 score_comp++;
-                Score();
+                score();
                 exit_flag = true;
             }    
              
@@ -87,7 +87,7 @@ $(document).ready(function(){
                 $('.result').text('Вы проиграли!');
                 $('.MAIN_DIV .div').unbind('click');
                 score_comp++;
-                Score();
+                score();
                 exit_flag = true;
             }    
         }
@@ -208,7 +208,7 @@ function check3user(znak){
             $('.result').text('Вы выиграли!');
             $('.MAIN_DIV .div').unbind('click');
             score_user++;
-            Score();
+            score();
             exit_flag = true;
         }     
     }
@@ -236,7 +236,7 @@ function check2comp(znak){
             $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
             score_user++;
-            Score();
+            score();
             exit_flag = true;
         }    
          
@@ -246,7 +246,7 @@ function check2comp(znak){
             $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
             score_user++;
-            Score();
+            score();
             exit_flag = true;
         }    
          
@@ -256,7 +256,7 @@ function check2comp(znak){
             $('.result').text('Вы проиграли!');
             $('.MAIN_DIV .div').unbind('click');
             score_user++;
-            Score();
+            score();
             exit_flag = true;
         }    
     }
